@@ -16,7 +16,11 @@ const ToDo = () => {
     <div>
       <Header />
       <ToDoForm addTask={addTask} />
-      <ToDoList tasks={tasks} />
+      <ToDoList
+        tasks={tasks}
+        deleteTask={deleteTask}
+        setDoneTask={setDoneTask}
+      />
     </div>
   );
 };

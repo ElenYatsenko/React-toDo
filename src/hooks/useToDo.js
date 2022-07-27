@@ -13,7 +13,11 @@ const useToDo = (initialValue) => {
       };
       setTasks([...tasks, newTask]);
     },
-    setDoneTask: () => {},
+    setDoneTask: (id) => {
+      setTasks(
+        tasks.map((task) => (task.id === id ? { ...task, isDone: true } : task))
+      );
+    },
     deleteTask: (id) => {
       setTasks(tasks.filter((task) => task.id !== id));
     },
