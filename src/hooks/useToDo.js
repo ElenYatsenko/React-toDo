@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const UseToDo = (initialValue) => {
+const useToDo = (initialValue) => {
   const [tasks, setTasks] = useState(initialValue);
 
   return {
@@ -20,4 +20,4 @@ const UseToDo = (initialValue) => {
   };
 };
 
-export default UseToDo;
+export default useToDo;

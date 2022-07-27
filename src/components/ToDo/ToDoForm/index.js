@@ -1,15 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import UseToDo from "../../../hooks/useToDo";
 
-const ToDoForm = () => {
-  const { tasks, addTask, setDoneTask, deleteTask } = UseToDo([
-    {
-      id: Date.now(),
-      body: "test task",
-      isDone: false,
-    },
-  ]);
+const ToDoForm = ({ addTask }) => {
   return (
     <div>
       <Formik initialValues={{ body: "" }} onSubmit={addTask}>
