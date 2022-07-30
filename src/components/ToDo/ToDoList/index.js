@@ -1,28 +1,32 @@
 import React from "react";
-import UseToDo from "../../../hooks/useToDo";
+import styles from "./ToDoList.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const ToDoList = ({ tasks, deleteTask, setDoneTask }) => {
   return (
-    <ul>
+    <ul className={styles.todo_list}>
       {tasks.map((task) => (
-        <li key={task.id}>
-          {task.body}
-          <> </>
-          <span
-            onClick={() => {
-              deleteTask(task.id);
-            }}
-          >
-            -
+        <li key={task.id} className={styles.todo}>
+          <span className={task.isDone ? styles.completed : !styles.completed}>
+            {task.body}
           </span>
-          <> </>
-          <span
+          <button
             onClick={() => {
               setDoneTask(task.id);
             }}
+            className={styles.trash_btn}
           >
-            +
-          </span>
+            <FontAwesomeIcon icon={faCheck} />
+          </button>
+          <button
+            onClick={() => {
+              deleteTask(task.id);
+            }}
+            className={styles.complete_btn}
+          >
+            <FontAwesomeIcon icon={faTrash} />
+          </button>
         </li>
       ))}
     </ul>

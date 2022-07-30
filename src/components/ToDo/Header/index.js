@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <header>
-      <h1>To Do List</h1>
+    <header className={styles.header}>
+      <h1>AbacaxiGut's Todo list</h1>
     </header>
   );
 };

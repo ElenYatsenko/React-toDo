@@ -3,6 +3,7 @@ import { useToDo } from "../../hooks";
 import Header from "./Header/index";
 import ToDoForm from "./ToDoForm/index";
 import ToDoList from "./ToDoList/index";
+import styles from "../../App.scss";
 
 const ToDo = () => {
   const { tasks, addTask, setDoneTask, deleteTask } = useToDo([
@@ -13,7 +14,7 @@ const ToDo = () => {
     },
   ]);
   return (
-    <div>
+    <div className={styles.todo_container}>
       <Header />
       <ToDoForm addTask={addTask} />
       <ToDoList
