@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.form_input {
+  position: relative;
+}
 .form_input,
 .form_button {
   padding: 0.5rem;
@@ -22,4 +24,14 @@
 
 .form_button:hover {
   background: darkgrey;
+}
+
+.error {
+  position: absolute;
+  right: 35%;
+  top: 25%;
+  padding: 5px;
+
+  color: red;
+  font-size: 1em;
 }

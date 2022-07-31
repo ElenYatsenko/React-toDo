@@ -16,6 +16,9 @@
   justify-content: flex-end;
   align-items: center;
   color: #a78c96;
+
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .todo span {
   flex: 1;
