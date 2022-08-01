@@ -15,7 +15,9 @@ const useToDo = (initialValue) => {
     },
     setDoneTask: (id) => {
       setTasks(
-        tasks.map((task) => (task.id === id ? { ...task, isDone: true } : task))
+        tasks.map((task) =>
+          task.id === id ? { ...task, isDone: !task.isDone } : task
+        )
       );
     },
     deleteTask: (id) => {
